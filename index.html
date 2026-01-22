@@ -1,17 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap"
+      rel="stylesheet"
+    />
     <title>Arcane</title>
-</head>
-<style>
-    h1 {
-        color: blueviolet;
+  </head>
+  <style>
+    @font-face {
+      font-family: "FuenteArcane";
+      src: url("Arcane.otf") format("opentype");
+      font-weight: normal;
+      font-style: normal;
     }
-</style>
-<body>
-    <h2>git hub</h2>
-    <h1>Arcane</h1>
-</body> 
+
+    body {
+      margin: 0;
+      background: #000000;
+      min-height: 300vh;
+    }
+
+    .home {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      height: 90vh;
+      background-color: #000;
+      background-image:
+        radial-gradient(
+          circle at 15% 50%,
+          rgba(0, 229, 255, 0.2) 0%,
+          transparent 45%
+        ),
+        radial-gradient(
+          circle at 85% 50%,
+          rgba(255, 0, 122, 0.2) 0%,
+          transparent 45%
+        );
+
+      border-bottom: 2px solid rgba(0, 229, 255, 0.3);
+    }
+
+    .titulo-arcane {
+      display: flex;
+      font-family: "FuenteArcane", sans-serif;
+      font-size: 200px;
+      color: rgb(255, 255, 255);
+      letter-spacing: 3px;
+      background: linear-gradient(
+        to bottom,
+        #f0e5ca 20%,
+        #c1a161 50%,
+        #7d612c 80%
+      );
+      text-shadow: 2px 2px 8px rgba(216, 175, 86, 0.416);
+      /* se tiene que utilizar webkit para poder hacer el degradado */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      margin-top: -5px;
+
+    }
+
+     .subitulo-arcane {
+      position: absolute;
+      font-family: "Lexend", sans-serif;
+      color: #f0e5ca;
+      font-size: 20px;
+      font-weight: 200;
+      letter-spacing: 20px;
+      margin-top: 90px;
+    }
+
+     .contenedor-conflicto {
+      display: flex;
+      justify-content: center;  /* Centra los dos bloques en la pantalla */
+      gap: 300px;              /* Espacio */
+      margin-top: 100px;
+      padding: 0 50px;
+    }
+
+    .titulo-piltover {
+      color: #00b9e2;
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 70px;
+      font-weight: 600;
+     margin: 0 0 20px 0;
+    }
+
+    .parrafo-piltover {
+      font-family: "Roboto Condensed", sans-serif;
+      color: white;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: justify; /* HACE QUE LAS LÍNEAS MIDAN LO MISMO */
+      margin: 0;
+    }
+
+    .titulo-zaun {
+      color: #ff004c;
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 70px;
+      font-weight: 600;
+      margin: 0 0 20px 0;
+      text-align: right;
+    }
+
+    .parrafo-zaun {
+      font-family: "Roboto Condensed", sans-serif;
+      color: white;
+    text-align: justify; 
+      margin: 0;
+      font-size: 20px;
+      line-height: 30px;
+      
+    }
+
+    .piltover, .zaun {
+      width: 400px; /* es para definir el ancho del cuadrado
+       */
+    }
+    
+  </style>
+  <body>
+    <div class="home">
+      <h1 class="titulo-arcane">ARCANE</h1>
+      <h1 class="subitulo-arcane">Piltover & Zaun</h1>
+    </div>
+
+    <div class="contenedor-conflicto">
+      <div class="piltover">
+        <h2 class="titulo-piltover">PILTOVER</h2>
+        <p class="parrafo-piltover">
+          La Ciudad del Progreso es el triunfo de la lógica sobre el caos. Aquí,
+          la Hextech une la magia y la ciencia para crear un mundo de oro,
+          mármol y precisión absoluta. Es el epicentro de la civilización, donde
+          cada innovación es un paso calculado hacia la perfección.
+        </p>
+      </div>
+
+      <div class="zaun">
+        <h2 class="titulo-zaun">ZAUN</h2>
+        <p class="parrafo-zaun">
+          El Distrito Subterráneo es el motor de hierro y neón que nunca duerme.
+          Aquí, la Quimtech nace de la necesidad y la urgencia, transformando el
+          desecho en potencia pura. Es el refugio de los audaces, donde la
+          supervivencia dicta una evolución sin límites ni permisos.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
