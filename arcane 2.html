@@ -1,0 +1,95 @@
+<style>
+    .seccion-resumenes {
+        padding: 80px 5%;
+        background-color: #000;
+        color: white;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .row-resumen {
+        display: flex;
+        align-items: stretch; /* Hace que imagen y texto tengan la misma altura */
+        margin-bottom: 60px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+    }
+
+    /* Clase para invertir el orden en la Temporada 2 */
+    .reverse {
+        flex-direction: row-reverse;
+    }
+
+    .texto-resumen {
+        flex: 0 0 60%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .imagen-resumen {
+        flex: 0 0 40%;
+        background-position: center;
+        background-size: cover;
+        min-height: 400px;
+        filter: grayscale(0.3) contrast(1.2);
+        transition: 0.5s;
+    }
+
+    .imagen-resumen:hover {
+        filter: grayscale(0);
+    }
+
+    /* Colores Temporada 1 - Piltover */
+    .t1-box { border-left: 5px solid #00e5ff; box-shadow: -10px 0 20px rgba(0, 229, 255, 0.1); }
+    .t1-box h2 { color: #00e5ff; font-size: 40px; margin-bottom: 20px; }
+
+    /* Colores Temporada 2 - Zaun */
+    .t2-box { border-right: 5px solid #ff007a; box-shadow: 10px 0 20px rgba(255, 0, 122, 0.1); }
+    .t2-box h2 { color: #ff007a; font-size: 40px; margin-bottom: 20px; text-align: right; }
+    .t2-box p { text-align: right; }
+
+    .parrafo-resumen {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #cccccc;
+        text-align: justify;
+    }
+</style>
+
+<section class="seccion-resumenes">
+    <div class="row-resumen t1-box">
+        <div class="texto-resumen">
+            <h2>TEMPORADA 1: EL ORIGEN</h2>
+            <p class="parrafo-resumen">
+                La primera temporada narra el colapso de la inocencia 
+                y el nacimiento del conflicto. Todo comienza con un robo 
+                fallido en Piltover liderado por las hermanas Vi y Powder, 
+                lo que desencadena una persecución violenta. Mientras el 
+                Hextech nace en los laboratorios de Jayce y Viktor prometiendo 
+                un progreso infinito, en las sombras de Zaun, Silco moldea una 
+                nueva nación basada en el Shimmer. La temporada culmina con la 
+                transformación total de Powder en Jinx, cuyo acto final de 
+                rebeldía rompe cualquier esperanza de paz.
+            </p>
+        </div>
+        <div class="imagen-resumen" style="background-image: url('piltover.jpg');"></div>
+    </div>
+
+    <div class="row-resumen reverse t2-box">
+        <div class="texto-resumen">
+            <h2>TEMPORADA 2: LA GUERRA TOTAL</h2>
+            <p class="parrafo-resumen">
+                La segunda entrega aborda las consecuencias del ataque al Consejo. 
+                Piltover, herida en su orgullo, despliega todo su poder militar, 
+                mientras Zaun se sumerge en una guerra civil por el vacío de poder. 
+                Vi y Jinx se encuentran en polos opuestos de una batalla que ya no 
+                es solo familiar, sino política. El Hextech y la Quimtech alcanzan 
+                su punto máximo de inestabilidad, revelando que el verdadero costo 
+                del progreso es la humanidad misma. Es el cierre de una epopeya 
+                donde las leyendas se forjan en sangre.
+            </p>
+        </div>
+        <div class="imagen-resumen" style="background-image: url('zaun.jpg');"></div>
+    </div>
+</section>
