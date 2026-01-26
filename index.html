@@ -1,167 +1,120 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap"
-    rel="stylesheet" />
-  <title>Arcane</title>
-  <link rel="stylesheet" href="Styles.css">
-</head>
-
-<body>
-  <div class="home">
-    <h1 class="titulo-arcane">ARCANE</h1>
-    <h1 class="subitulo-arcane">Piltover & Zaun</h1>
-  </div>
-
-  <div class="contenedor-conflicto">
-    <div class="piltover">
-      <h2 class="titulo-piltover">PILTOVER</h2>
-      <p class="parrafo-piltover">
-        La Ciudad del Progreso es el triunfo de la lógica sobre el caos. Aquí,
-        la Hextech une la magia y la ciencia para crear un mundo de oro,
-        mármol y precisión absoluta. Es el epicentro de la civilización, donde
-        cada innovación es un paso calculado hacia la perfección.
-      </p>
-    </div>
-
-    <div class="divisor"></div>
-
-    <div class="zaun">
-      <h3 class="titulo-zaun">ZAUN</h3>
-      <p class="parrafo-zaun">
-        El Distrito Subterráneo es el motor de hierro y neón que nunca duerme.
-        Aquí, la Quimtech nace de la necesidad y la urgencia, transformando el
-        desecho en potencia pura. Es el refugio de los audaces, donde la
-        supervivencia dicta una evolución sin límites ni permisos.
-      </p>
-    </div>
-
-  </div>
-  <section class="seccion-resumenes">
-    <div class="resumen t1">
-      <div class="texto-resumen">
-        <h2>TEMPORADA 1: EL ORIGEN</h2>
-        <p class="parrafo-resumen">
-          La primera temporada narra el colapso de la inocencia
-          y el nacimiento del conflicto. Todo comienza con un robo
-          fallido en Piltover liderado por las hermanas Vi y Powder,
-          lo que desencadena una persecución violenta. Mientras el
-          Hextech nace en los laboratorios de Jayce y Viktor prometiendo
-          un progreso infinito, en las sombras de Zaun, Silco moldea una
-          nueva nación basada en el Shimmer. La temporada culmina con la
-          transformación total de Powder en Jinx, cuyo acto final de
-          rebeldía rompe cualquier esperanza de paz.
-        </p>
-      </div>
-      <div class="imagen-resumen" style="background-image: url('piltover.jpg');"></div>
-    </div>
-
-    <div class="resumen t2">
-      <div class="texto-resumen">
-        <h2>TEMPORADA 2: LA GUERRA TOTAL</h2>
-        <p class="parrafo-resumen">
-          La segunda entrega aborda las consecuencias del ataque al Consejo.
-          Piltover, herida en su orgullo, despliega todo su poder militar,
-          mientras Zaun se sumerge en una guerra civil por el vacío de poder.
-          Vi y Jinx se encuentran en polos opuestos de una batalla que ya no
-          es solo familiar, sino política. El Hextech y la Quimtech alcanzan
-          su punto máximo de inestabilidad, revelando que el verdadero costo
-          del progreso es la humanidad misma. Es el cierre de una epopeya
-          donde las leyendas se forjan en sangre.
-        </p>
-      </div>
-      <div class="imagen-resumen" style="background-image: url('zaun.jpg');"></div>
-    </div>
-  </section>
-
-  <h1 class="titulo-expedientes">EXPEDIENTES</h1>
-
-
-  <section class="seccion-tarjetas">
-  <div class="tarjetas">
-    <div class="tarjeta-vi">
-      <img src="vi.jpg" alt="Descripción" width="10%" />
-      <h3 class="titulo-vi">VI</h3>
-      <p class="texto-vi">
-        Antigua líder callejera convertida en Pacificadora de Piltover.
-        Utiliza sus guanteletes Hextech para proteger lo que ama, cargando con
-        el peso del arrepentimiento y la lealtad dividida entre las dos
-        ciudades.
-      </p>
-    </div>
-
-    <div class="tarjeta-jinx">
-      <img src="jinx.jpg" alt="Descripción" width="10%" />
-      <h3 class="titulo-jinx">JINX</h3>
-      <p class="texto-jinx">
-        Una mente brillante fracturada por la tragedia y el Shimmer. Es el símbolo de la rebelión de Zaun,
-        expresando su dolor a través de inventos explosivos y una anarquía visual que busca borrar su pasado como
-        "Powder".
-      </p>
-    </div>
-
-    <div class="tarjeta-ekko">
-      <img src="ekko.jpg" alt="Descripción" width="10%" />
-      <h3 class="titulo-ekko">EKKO</h3>
-      <p class="texto-ekko">
-        Líder de los Firelights y genio inventor que rechaza el Shimmer. Con su dominio del Cronorruptor,
-        lucha por un futuro donde Zaun progrese sin perder su humanidad, siendo el puente entre la innovación y la
-        justicia.
-      </p>
-    </div>
-    </section>
-
-    <h1>Datos Curiosos</h1>
-
-    <section class="seccion-soundtrack-inferior">
-    <h2 class="titulo-musica">SOUNDTRACK</h2>
+<style>
+    /*CSS DE ANGEL*/     /*CSS DE ANGEL*/     /*CSS DE ANGEL*/     /*CSS DE ANGEL*/     /*CSS DE ANGEL*/
     
-    <div class="grid-musica">
-        <div class="tarjeta-track">
-            <div class="portada-album" style="background-image: url('https://i.scdn.co/image/ab67616d0000b27320b98a088ec1136b8e2172a5');"></div>
-            <div class="info-track">
-                <h4>The Line</h4>
-                <p>Woodkid</p>
+.seccion-resumenes {
+    padding: 80px 5%;
+    background-color: #000;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.row-resumen {
+    display: flex;
+    align-items: stretch;
+    /* Hace que imagen y texto tengan la misma altura */
+    margin-bottom: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+/* Clase para invertir el orden en la Temporada 2 */
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.texto-resumen {
+    flex: 0 0 60%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imagen-resumen {
+    flex: 0 0 40%;
+    background-position: center;
+    background-size: cover;
+    min-height: 400px;
+    filter: grayscale(0.3) contrast(1.2);
+    transition: 0.5s;
+}
+
+.imagen-resumen:hover {
+    filter: grayscale(0);
+}
+
+/* Colores Temporada 1 - Piltover */
+.t1-box {
+    border-left: 5px solid #00e5ff;
+    box-shadow: -10px 0 20px rgba(0, 229, 255, 0.1);
+}
+
+.t1-box h2 {
+    color: #00e5ff;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* Colores Temporada 2 - Zaun */
+.t2-box {
+    border-right: 5px solid #ff007a;
+    box-shadow: 10px 0 20px rgba(255, 0, 122, 0.1);
+}
+
+.t2-box h2 {
+    color: #ff007a;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.t2-box p {
+    text-align: right;
+}
+
+.parrafo-resumen {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cccccc;
+    text-align: justify;
+}
+</style>
+<body>
+    <section class="seccion-resumenes">
+        <div class="row-resumen t1-box">
+            <div class="texto-resumen">
+                <h2>TEMPORADA 1: EL ORIGEN</h2>
+                <p class="parrafo-resumen">
+                    La primera temporada narra el colapso de la inocencia
+                    y el nacimiento del conflicto. Todo comienza con un robo
+                    fallido en Piltover liderado por las hermanas Vi y Powder,
+                    lo que desencadena una persecución violenta. Mientras el
+                    Hextech nace en los laboratorios de Jayce y Viktor prometiendo
+                    un progreso infinito, en las sombras de Zaun, Silco moldea una
+                    nueva nación basada en el Shimmer. La temporada culmina con la
+                    transformación total de Powder en Jinx, cuyo acto final de
+                    rebeldía rompe cualquier esperanza de paz.
+                </p>
             </div>
-            <div class="icono-reproducir">▶</div>
+            <div class="imagen-resumen" style="background-image: url('piltover.jpg');"></div>
         </div>
 
-        <div class="tarjeta-track">
-            <div class="portada-album" style="background-image: url('https://i.scdn.co/image/ab67616d0000b2736142750e32230113c29f9e77');"></div>
-            <div class="info-track">
-                <h4>Ma meilleure ennemie</h4>
-                <p>Stromae & Pomme (Remix)</p>
+        <div class="row-resumen reverse t2-box">
+            <div class="texto-resumen">
+                <h2>TEMPORADA 2: LA GUERRA TOTAL</h2>
+                <p class="parrafo-resumen">
+                    La segunda entrega aborda las consecuencias del ataque al Consejo.
+                    Piltover, herida en su orgullo, despliega todo su poder militar,
+                    mientras Zaun se sumerge en una guerra civil por el vacío de poder.
+                    Vi y Jinx se encuentran en polos opuestos de una batalla que ya no
+                    es solo familiar, sino política. El Hextech y la Quimtech alcanzan
+                    su punto máximo de inestabilidad, revelando que el verdadero costo
+                    del progreso es la humanidad misma. Es el cierre de una epopeya
+                    donde las leyendas se forjan en sangre.
+                </p>
             </div>
-            <div class="icono-reproducir">▶</div>
+            <div class="imagen-resumen" style="background-image: url('zaun.jpg');"></div>
         </div>
-
-        <div class="tarjeta-track">
-            <div class="portada-album" style="background-image: url('https://i.scdn.co/image/ab67616d0000b273dad0600a98f7e212450b388d');"></div>
-            <div class="info-track">
-                <h4>Enemy</h4>
-                <p>Imagine Dragons & JID</p>
-            </div>
-            <div class="icono-reproducir">▶</div>
-        </div>
-
-        <div class="tarjeta-track">
-            <div class="portada-album" style="background-image: url('https://i.scdn.co/image/ab67616d0000b2732970729221147a4f9103e39b');"></div>
-            <div class="info-track">
-                <h4>Paint the Town Blue</h4>
-                <p>Ashnikko</p>
-            </div>
-            <div class="icono-reproducir">▶</div>
-        </div>
-    </div>
-</section>
-
-
+    </section>
 </body>
-
 </html>
