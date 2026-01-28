@@ -600,6 +600,17 @@ h1 {
     font-size: 250px;
     line-height: 200px;
   }
+
+  .divisor {
+        height: 350px;
+    }
+}
+
+   @media screen and (min-width: 1000px) and (max-width: 1700px) {
+
+    .divisor {
+        height: 350px;
+    }
 }
 
 @media screen and (max-width: 1400px) {
