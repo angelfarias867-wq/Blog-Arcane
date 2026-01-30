@@ -133,10 +133,9 @@ body {
 .contenedor-conflicto {
   display: flex;
   justify-content: center; /* Centra los dos bloques en la pantalla */
-  gap: 250px; /* Espacio */
+  gap: 100px; /* Espacio */
   margin-top: 100px;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 100%
 }
 
 /* ZONA PILTOVER */
@@ -240,6 +239,7 @@ h1 {
   display: flex;
   gap: 40px;
   justify-content: center;
+  align-items: stretch; /* permite que las tarjetas ocupen la misma altura */
 }
 
 .tarjeta-vi,
@@ -251,11 +251,12 @@ h1 {
   border: 3px solid #303030;
   border-radius: 10px;
   overflow: hidden;
-  /* ESTO CORRIGE EL BORDE RARO */
-  
   flex: 1;
-  max-width: 550px; /* Antes era 400px. Ahora pueden ser mucho más grandes */
-  min-width: 320px; /* Para que en la de tu amigo no se rompan */
+
+
+  max-width: 550px;
+  min-width: 320px; 
+  height: 100%;
 }
 
 .titulo-ekko,
@@ -274,8 +275,10 @@ h1 {
 .tarjeta-jinx img,
 .tarjeta-ekko img {
   width: 100%;
-  height: 500px;
+  height: auto;
+  max-height: 50%;
   object-fit: cover;
+  display: block;
 }
 
 .texto-vi,
@@ -292,6 +295,7 @@ h1 {
   margin-bottom: 25px; /* Espacio extra abajo para que no se pegue al borde */
 
   line-height: 25px;
+  flex: 1 1 auto; /* permite que el texto ocupe el espacio restante dentro de la tarjeta */
 }
 
 .tarjeta-vi:hover,
