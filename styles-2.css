@@ -37,7 +37,6 @@
   min-height: 400px;
   filter: grayscale(0.3) contrast(1.2);
   background-position: center;
-  background-size: cover;
   transition: 0.5s;
 }
 
