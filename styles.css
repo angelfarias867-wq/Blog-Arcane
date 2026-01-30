@@ -239,7 +239,7 @@ h1 {
   display: flex;
   gap: 40px;
   justify-content: center;
-  align-items: stretch; /* permite que las tarjetas ocupen la misma altura */
+  align-items: stretch;
 }
 
 .tarjeta-vi,
@@ -253,10 +253,8 @@ h1 {
   overflow: hidden;
   flex: 1;
 
-
   max-width: 550px;
-  min-width: 320px; 
-  height: 100%;
+  min-width: 320px
 }
 
 .titulo-ekko,
@@ -275,8 +273,7 @@ h1 {
 .tarjeta-jinx img,
 .tarjeta-ekko img {
   width: 100%;
-  height: auto;
-  max-height: 50%;
+  height: 450px;
   object-fit: cover;
   display: block;
 }
@@ -358,7 +355,7 @@ h1 {
   }
 
   #botones {
-    gap: 10px;
+    gap: 15px;
     align-items: center;
   }
 
@@ -368,7 +365,7 @@ h1 {
   }
 
   .titulo-arcane-barra {
-    font-size: 20px;
+    font-size: 15px;
   }
   .titulo-arcane {
     font-size: 100px;
@@ -481,6 +478,13 @@ h1 {
     font-size: 40px;
     margin-top: 100px;
   }
+
+  #botones a:hover {
+  transition:
+    color 0.0s ease,
+    text-shadow 0.0s ease;
+}
+
 }
 
 
