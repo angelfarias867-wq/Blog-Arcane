@@ -200,39 +200,14 @@
   opacity: 0.6;
 }
 
-/* Estilos base del reproductor */
-audio {
-  width: 100%;             /* Se alarga para ocupar el espacio disponible */
-  max-width: 500px;        /* Ajusta este número para hacerla más larga */
-  height: 35px;
-  background-color: transparent;
-  outline: none;
+.reproductor-minimal {
+    height: 30px;
+    width: 200px;
+    filter: invert(100%) hue-rotate(180deg) brightness(1.5); /* Ajusta el color para que combine con el modo oscuro */
+    opacity: 0.7;
+    transition: opacity 0.3s;
 }
 
-/* Forzar que todos los controles sean visibles y blancos */
-audio::-webkit-media-controls-enclosure {
-  background-color: transparent;
-}
-
-/* La línea de reproducción blanca y larga */
-audio::-webkit-media-controls-timeline {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  margin: 0 15px;
-  flex-grow: 1;            /* Esto ayuda a que se estire */
-  filter: brightness(2);   /* La vuelve totalmente blanca */
-}
-
-/* Minutos y segundos en blanco */
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display {
-  color: #ffffff !important;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 12px;
-}
-
-/* Botón de reproducción blanco */
-audio::-webkit-media-controls-play-button {
-  filter: invert(100%);    /* Lo vuelve blanco */
-  transform: scale(1.1);
+.reproductor-minimal:hover {
+    opacity: 1;
 }
