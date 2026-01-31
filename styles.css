@@ -1,10 +1,11 @@
 /* ESTO ES PARA PODER COLOCAR LA FUENTE CON UN ARCHIVO */
 @font-face {
   font-family: "FuenteArcane";
-  src: url("Arcane.otf") format("opentype");
+  src: url("font/Arcane.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
+
 
 * {
   box-sizing: border-box;
@@ -14,14 +15,13 @@ html {
   overflow-x: hidden;
   width: 100%;
   scroll-behavior: smooth;
-  /* Ajusta este valor al alto de tu barra + un extra de cortesía */
-  scroll-padding-top: 150px;
+  /* Ajusta este valor el alto de la barra*/
+  scroll-padding-top: 90px;
 }
 
 body {
   margin: 0;
   background: #000000;
-  min-height: 250vh;
   overflow-x: hidden;
   width: 100%;
 }
@@ -107,8 +107,8 @@ body {
   display: flex;
   font-family: "FuenteArcane", sans-serif;
   font-size: 200px;
-  color: rgb(255, 255, 255);
   letter-spacing: 3px;
+  color: #f0e5ca;
   background: linear-gradient(to bottom, #f0e5ca 20%, #c1a161 50%, #7d612c 80%);
   text-shadow: 2px 2px 8px rgba(216, 175, 86, 0.416);
   /* se tiene que utilizar webkit para poder hacer el degradado, pq en los navegadores no se ve bien */
@@ -133,7 +133,7 @@ body {
 .contenedor-conflicto {
   display: flex;
   justify-content: center; /* Centra los dos bloques en la pantalla */
-  gap: 100px; /* Espacio */
+  gap: 120px; /* Espacio */
   margin-top: 100px;
   width: 100%
 }
@@ -147,13 +147,6 @@ body {
   font-weight: 600;
   margin-bottom: 20px;
   margin-top: 0;
-    color: #00b9e2;
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 70px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    margin-top: 0;
-
   /* El subrayado */
   border-bottom: 4px solid rgb(0, 229, 255);
   line-height: 55px; /* Reduce el espacio vertical del texto */
@@ -167,14 +160,7 @@ body {
     font-size: 20px;
     line-height: 30px;
     text-align: justify;
-    /* HACE QUE LAS LÍNEAS MIDAN LO MISMO */
     margin: 0;
-  font-family: "Roboto Condensed", sans-serif;
-  color: white;
-  font-size: 20px;
-  line-height: 30px;
-  text-align: justify; /* HACE QUE LAS LÍNEAS MIDAN LO MISMO */
-  margin: 0;
   hyphens: auto;
 }
 
@@ -189,24 +175,25 @@ body {
 
   /* El subrayado */
   border-bottom: 4px solid #fd024e;
-  line-height: 55px; /* Reduce el espacio vertical del texto */
+  line-height: 55px;
   padding-bottom: 5px;
   display: inline-block;
 }
 
 .piltover {
+  text-align: center;
   width: 400px; /* es para definir el ancho del cuadrado  */
   flex: 1;
 }
 
 .zaun {
-  text-align: right;
+  text-align: center;
   width: 400px;
   flex: 1;
 }
 /* LINEA DIVISORA ENTRE PILTOVER Y ZAUN */
 .divisor {
-  width: 2px; /* ancho */
+  width: 3px; /* ancho */
   background: linear-gradient(
     to bottom,
     #00b9e2c5,
@@ -219,19 +206,21 @@ h1 {
   color: #ffffff;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 70px;
-  font-size: 70px;
   font-weight: 600;
 }
 
 
 /* EXPEDIENTES */
 
-.titulo-expedientes {
+h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 70px;
+  font-weight: 600;
     color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 /* TARJETAS */
 
@@ -240,6 +229,8 @@ h1 {
   gap: 40px;
   justify-content: center;
   align-items: stretch;
+  flex-wrap: wrap;
+  
 }
 
 .tarjeta-vi,
@@ -252,9 +243,6 @@ h1 {
   border-radius: 10px;
   overflow: hidden;
   flex: 1;
-
-  max-width: 550px;
-  min-width: 320px
 }
 
 .titulo-ekko,
@@ -267,6 +255,7 @@ h1 {
   margin-left: 30px;
   margin-top: 20px;
   text-align: left;
+  hyphens: auto;
 }
 
 .tarjeta-vi img,
@@ -285,14 +274,12 @@ h1 {
   font-family: "Roboto Condensed", sans-serif;
   display: flex;
   width: 90%;
-  text-align: justify; /* HACE QUE LAS LÍNEAS MIDAN LO MISMO */
+  text-align: justify;
 
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 25px; /* Espacio extra abajo para que no se pegue al borde */
-
+  margin-bottom: 25px; 
   line-height: 25px;
-  flex: 1 1 auto; /* permite que el texto ocupe el espacio restante dentro de la tarjeta */
 }
 
 .tarjeta-vi:hover,
@@ -323,28 +310,131 @@ h1 {
   transition: all 0.3s ease;
 }
 
-/* EXPEDIENTES */
+.linea-final {
+  width: 100%;
+  height: 1px;
+  background: #454545;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
 
-.titulo-expedientes {
-  color: #ffffff;
+.titulo-creadores {
+  margin: 0;
+  font-size: 40px;
+  font-family: "Roboto Condensed", sans-serif;
+    color: #ffffffee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.616)
+}
+
+.contenedor-creador {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #ffffffaf;
+  margin: auto;
+  border-radius: 10px;
+  width: 90%; 
+  max-width: 900px;
+  margin-bottom: 40px;
+
+  background-color: #000;
+  background-image:
+    radial-gradient(
+      circle at 15% 45%,
+      rgba(0, 229, 255, 0.212) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 85% 45%,
+      rgba(255, 0, 123, 0.212) 0%,
+      transparent 45%
+    );
 }
 
+.linea-creador {
+  width: 2px;
+  height: 50px;
+  background: #ffffff;
+}
 
+.titulo-mariangel {
+  text-decoration: none;
+  color: #00dffd;
+  text-shadow: #00e5ffc4 0px 0px 10px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  margin: 0;
+  text-align: center;
+  margin-bottom: -7px;
+}
+.subtitulo-mariangel {
+  color: #ffffff;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
 
+ .link-mariangel {
+  text-decoration: none;
+  color: #00dffd;
+}
+
+.creador-mariangel{
+  width: 400px;
+   transition: transform 0.5s ease;
+}
+
+.creador-angel{
+  width: 400px;
+   transition: transform 0.5s ease;
+}
+
+.titulo-angel {
+    text-shadow: #fd024e 0px 0px 10px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  margin: 0;
+    text-align: center;
+   margin-bottom: -7px;
+}
+
+.subtitulo-angel {
+  color: #ffffff;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
+
+.link-angel {
+  text-decoration: none;
+  color: #fd024e;
+}
+
+.creador-mariangel:hover, .creador-angel:hover {
+  transform: scale(1.2);
+}
 /*  MEDIA QUERIES (RESPONSIVE) */
 /* PARA CELULAR */
 @media screen and (max-width: 767px) {
   .home {
-    height: 100vh;
+    height: 90vh;
   }
 
   .margen-general {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 100%;
+    max-width: 100%;
     padding: 0;
     margin: 0;
   }
@@ -381,8 +471,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 35px !important;
-    margin-top: 100px !important;
+    gap: 35px;
+    margin-top: 100px;
     width: 100%;
   }
 
@@ -414,7 +504,6 @@ h1 {
     align-items: center;
 
     /* El subrayado */
-
     line-height: 35px;
     padding-bottom: 5px;
   }
@@ -485,18 +574,126 @@ h1 {
     text-shadow 0.0s ease;
 }
 
+.titulo-creadores {
+  font-size: 30px;
 }
 
+.contenedor-creador {
+  width: 85%;
+  gap: 10px;
+  padding: 15px;
+}
 
-@media screen and (min-width: 2500px) {
+.titulo-mariangel, .titulo-angel {
+  font-size: 22px;
+}
+.subtitulo-mariangel, .subtitulo-angel {
+  font-size: 12px;
+}
+
+.creador-mariangel:hover, .creador-angel:hover {
+  transform: scale(1.0);
+}
+}
+
+/* para tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+.barra {
+  height: 55px;
+}
+
+.titulo-arcane-barra {
+  font-size: 25px;
+}
+
+.titulo-arcane {
+  font-size: 150px;
+  letter-spacing: 3px;
+  line-height: 130px;
+}
+
+.subitulo-arcane {
+  font-size: 20px;
+  letter-spacing: 15px;
+  margin-top: 0;
+}
+
+  .contenedor-conflicto {
+    gap: 40px;
+  }
+
+  .piltover, .zaun {
+    width: auto; 
+    flex: 1;
+  }
+
+  .titulo-piltover, .titulo-zaun {
+    font-size: 45px;
+    line-height: 40px;
+  }
+
+  .parrafo-piltover, .parrafo-zaun {
+    font-size: 16px;
+  }
+
+  .titulo-expedientes {
+    font-size: 40px;
+    margin-top: 100px;
+  }
+  .tarjetas {
+   display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .tarjeta-vi,
+  .tarjeta-jinx,
+  .tarjeta-ekko {
+    width: 85%;
+    max-width: 350px;
+    min-width: 320px;
+    margin: 0 auto;
+    flex: 0 1 calc(45%);
+  }
+
+  .tarjeta-vi img,
+  .tarjeta-jinx img,
+  .tarjeta-ekko img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .titulo-vi,
+  .titulo-jinx,
+  .titulo-ekko {
+    margin-left: 15px;
+    font-size: 24px;
+  }
+
+  .texto-vi,
+  .texto-jinx,
+  .texto-ekko {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 16px;
+  }
+}
+
+/* para pantallas grandes */
+@media screen and (min-width: 1920px) {
   .margen-general {
-    max-width: 1400px;
+    max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .contenedor-conflicto {
-    gap: 100px;
+    gap: 130px;
   }
 
   .tarjeta-vi img,
@@ -509,17 +706,29 @@ h1 {
     font-size: 250px;
     line-height: 200px;
   }
-}
 
+  .subitulo-arcane {
+    font-size: 28px;
+    letter-spacing: 25px;
+  }
 
-@media screen and (max-width: 1400px) {
+  .tarjetas {
+    gap: 60px;
+  }
+
+  .tarjeta img {
+    height: 600px; 
+  }
+
+  .parrafo-piltover, 
+  .parrafo-zaun {
+    font-size: 22px;
+    line-height: 1.6; 
+    max-width: 800px; 
+  }
+
   .contenedor-conflicto {
-    gap: 100px;
-  } 
-}
-
-@media screen and (max-width: 1024px) {
-  .contenedor-conflicto {
-    gap: 50px;
+    gap: 150px;
+    align-items: center;
   }
 }
