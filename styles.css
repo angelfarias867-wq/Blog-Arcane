@@ -214,13 +214,17 @@ h1 {
 
 h2 {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 70px;
+  font-size: 65px;
   font-weight: 600;
     color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+}
+
+.titulo-expedientes {
+    font-size: 65px;
+    margin-top: 60px;
 }
 /* TARJETAS */
 
@@ -230,7 +234,6 @@ h2 {
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
-  
 }
 
 .tarjeta-vi,
@@ -517,6 +520,11 @@ h2 {
     text-align: center;
   }
 
+.titulo-expedientes {
+    font-size: 45px;
+    margin-top: 40px;
+  }
+
   .divisor {
     width: 70%; 
     height: 2px;
@@ -563,11 +571,6 @@ h2 {
     font-size: 16px;
   }
 
-  .titulo-expedientes {
-    font-size: 40px;
-    margin-top: 100px;
-  }
-
   #botones a:hover {
   transition:
     color 0.0s ease,
@@ -594,6 +597,7 @@ h2 {
 .creador-mariangel:hover, .creador-angel:hover {
   transform: scale(1.0);
 }
+
 }
 
 /* para tablets */

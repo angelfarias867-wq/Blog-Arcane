@@ -2,18 +2,28 @@
   background-color: #000;
   color: white;
   font-family: "Roboto Condensed", sans-serif;
-  padding: 20px 5% 20px 5%;
+  padding: 20px 5% 0 5%;
+
+  width: 90%;
+  margin: auto;
 }
 
-h2#titulo-resumen {
+h2#titulo-resumen, 
+.titulo-musica, 
+.llamado {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 70px;
+  font-size: 65px;
   font-weight: 600;
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  /* MARGEN IDÉNTICO PARA TODOS */
+  margin-top: 60px; 
+  margin-bottom: 30px;
+  padding: 0;
 }
 
 .row-resumen {
@@ -95,15 +105,6 @@ h2#titulo-resumen {
   margin: 0;
 }
 
-.titulo-musica {
-  font-family: "FuenteArcane", sans-serif;
-  color: #fff;
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  letter-spacing: 5px;
-  text-shadow: 0 0 10px #fd024e;
-}
 .p-soundtrack {
   font-family: "Roboto Condensed", sans-serif;
   color: #cccccc;
@@ -113,7 +114,12 @@ h2#titulo-resumen {
   margin: 20px auto;
   padding: 15px 25px;
   text-align: justify;
-  background: rgba(255, 255, 255, 0.02); /* Un fondo casi invisible para dar textura */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.02
+  ); /* Un fondo casi invisible para dar textura */
   border-left: 3px solid #00e5ff;
   border-radius: 0 10px 10px 0;
   transition: all 0.3s ease;
@@ -147,9 +153,9 @@ h2#titulo-resumen {
   display: flex;
   font-family: "Roboto Condensed", sans-serif;
   flex-direction: column;
-  gap: 15px;               /* Espacio entre cada canción */
-  max-width: 600px;        /* Limita el ancho para que no se estiren demasiado */
-  margin: 0 auto;          /* Centra toda la lista en la pantalla */
+  gap: 15px; /* Espacio entre cada canción */
+  max-width: 600px; /* Limita el ancho para que no se estiren demasiado */
+  margin: 0 auto; /* Centra toda la lista en la pantalla */
 }
 
 .tarjeta-track {
@@ -158,12 +164,12 @@ h2#titulo-resumen {
   border-radius: 15px;
   display: flex;
   align-items: center;
-  padding: 15px 15px; 
+  padding: 15px 15px;
   transition: 0.4s ease;
   margin-bottom: 15px; /* Separa una tarjeta de otra verticalmente */
 }
 
-.tarjeta-track:hover  {
+.tarjeta-track:hover {
   transform: translateY(-5px);
   border-color: #fd024e; /* Cambio a fuccia de zaun al pasar el mouse */
   box-shadow: 0px 0px 15px #fd024e;
@@ -202,7 +208,7 @@ h2#titulo-resumen {
   color: #fd024e;
 }
 
-.tarjeta-track:hover  .titulo-mme  {
+.tarjeta-track:hover .titulo-mme {
   color: #fd024e;
 }
 
@@ -258,49 +264,41 @@ h2#titulo-resumen {
 }
 
 .interesante {
-    background-color: #000;
-    padding: 60px 0; /* Espacio arriba y abajo de la sección */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contenedor-cerrado {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.llamado {
-    font-family: "FuenteArcane", sans-serif; /* Usando tu fuente personalizada */
-    color: #fff;
-    font-size: 2.2rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .area-de-relleno {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 40px;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.02);
 }
 
 /*  MEDIA QUERIES (RESPONSIVE) */
 /* PARA CELULAR */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .seccion-resumenes {
     padding: 40px 20px;
   }
 
-  .row-resumen, .reverse {
+  .row-resumen,
+  .reverse {
     flex-direction: column;
     margin-bottom: 40px;
   }
 
-  .texto-resumen, .imagen-resumen {
+  .texto-resumen,
+  .imagen-resumen {
     flex: 0 0 100%;
     width: 100%;
   }
@@ -310,7 +308,8 @@ h2#titulo-resumen {
     order: -1;
   }
 
-  .t1-box h2, .t2-box h2 {
+  .t1-box h2,
+  .t2-box h2 {
     font-size: 28px;
     text-align: center;
   }
@@ -353,6 +352,20 @@ h2#titulo-resumen {
   .grid-preguntas {
     grid-template-columns: 1fr; /* Una sola columna para los links */
   }
+
+.titulo-musica {
+    font-size: 45px;
+    text-align: center;
+  }
+
+h2#titulo-resumen {
+    font-size: 45px;
+  }
+
+.llamado {
+    font-size: 45px;
+  }  
+  
 }
 
 /* PARA TABLETS */
@@ -371,7 +384,8 @@ h2#titulo-resumen {
     min-height: 350px;
   }
 
-  .t1-box h2, .t2-box h2 {
+  .t1-box h2,
+  .t2-box h2 {
     font-size: 32px; /* se reduce un poco el tamaño del título */
   }
 
