@@ -2,7 +2,7 @@
   background-color: #000;
   color: white;
   font-family: "Roboto Condensed", sans-serif;
-  padding: 120px 5%;
+  padding: 40px 5%; 
 }
 
 .row-resumen {
@@ -56,12 +56,12 @@
 
 /* Colores Temporada 2 - Zaun */
 .t2-box {
-  border-right: 5px solid #ff007a;
+  border-right: 5px solid #fd024e;
   box-shadow: 10px 0 20px rgba(255, 0, 122, 0.1);
 }
 
 .t2-box h2 {
-  color: #ff007a;
+  color: #fd024e;
   font-size: 40px;
   margin-bottom: 20px;
   text-align: right;
@@ -81,9 +81,7 @@
 
 .seccion-soundtrack-inferior {
   background-color: #000000;
-  padding: 50px 5%;
-  background-color: #000000;
-  padding: 50px 5%;
+  padding: 40px 10% 100px 10%;
 }
 
 .titulo-musica {
@@ -93,12 +91,50 @@
   font-size: 2.5rem;
   margin-bottom: 40px;
   letter-spacing: 5px;
-  text-shadow: 0 0 10px #ff007a; /* Brillo rosa Jinx */
+  text-shadow: 0 0 10px #fd024e; /* Brillo rosa Jinx */
+}
+.p-soundtrack {
+  font-family: "Roboto Condensed", sans-serif; /* Usamos la fuente que ya tienes */
+  color: #cccccc; /* Gris claro para lectura cómoda */
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 800px; /* Evita que el texto sea demasiado ancho */
+  margin: 20px auto; /* Centra el bloque de texto */
+  padding: 15px 25px;
+  text-align: justify;
+  background: rgba(255, 255, 255, 0.02); /* Un fondo casi invisible para dar textura */
+  border-left: 3px solid #00e5ff; /* Detalle en Cian (Piltover) */
+  border-radius: 0 10px 10px 0;
+  transition: all 0.3s ease;
 }
 
+/* Efecto al pasar el mouse sobre el texto */
+.p-soundtrack:hover {
+  color: #ffffff;
+  background: rgba(0, 229, 255, 0.05);
+  border-left-color: #fd024e; /* Cambia a Rosa (Jinx) al hacer hover */
+  text-shadow: 0 0 8px rgba(253, 2, 78, 0.3);
+}
+
+/* Estilo especial para el párrafo de "Datos curiosos" */
+.p-soundtrack:last-of-type {
+  font-style: italic;
+  font-size: 0.95rem;
+  border-left-style: dashed; /* Para diferenciarlo como una nota extra */
+}
+
+.resaltador {
+  font-size: 1.2rem; /* Aumenta el tamaño un poco más que el texto normal */
+  color: #fd024e;    /* El color rosa/fucsia que ya usas en los hovers */
+  font-weight: bold;
+  text-transform: uppercase; /* Opcional: para que se vea más imponente */
+  text-shadow: 0 0 10px rgba(253, 2, 78, 0.6); /* Brillo neón suave */
+  margin-right: 5px; /* Separa un poco de la siguiente palabra */
+}
 /* La cuadrícula de canciones */
 .grid-musica {
   display: flex;
+  font-family: "Roboto Condensed", sans-serif;
   flex-direction: column; /* Alinea las tarjetas en vertical */
   gap: 15px;               /* Espacio entre cada canción */
   max-width: 600px;        /* Limita el ancho para que no se estiren demasiado */
@@ -111,15 +147,15 @@
   border-radius: 15px;
   display: flex;
   align-items: center;
-  padding: 10px 15px; /* Reducimos el padding para que sea más compacta */
+  padding: 15px 15px; /* Reducimos el padding para que sea más compacta */
   transition: 0.4s ease;
-  
+  margin-bottom: 15px; /* Separa una tarjeta de otra verticalmente */
 }
 
 .tarjeta-track:hover  {
   transform: translateY(-5px);
-  border-color: #ff0000; /* Cambio a azul Piltover al pasar el mouse */
-  box-shadow: 0px 0px 15px rgb(255, 0, 0);
+  border-color: #fd024e; /* Cambio a fuccia de zaun al pasar el mouse */
+  box-shadow: 0px 0px 15px #fd024e;
 }
 
 .portada-album {
@@ -152,60 +188,60 @@
 }
 
 .tarjeta-track:hover .titulo-enemy {
-    color: #ff0000;
+  color: #fd024e;
 }
 
 .tarjeta-track:hover  .titulo-mme  {
-    color: #ff0000;
+  color: #fd024e;
 }
 
 .tarjeta-track:hover .titulo-goodbye {
-    color: #ff0000;
+  color: #fd024e;
 }
 
 .tarjeta-track:hover .titulo-line {
-    color: #ff0000;
+  color: #fd024e;
 }
 
 .tarjeta-track:hover .titulo-tab {
-    color: #ff0000;
+  color: #fd024e;
 }
 
 .tarjeta-track:hover .artista-1 {
-    color: #00b9e2;
+  color: #00b9e2;
 }
 
 .tarjeta-track:hover .artista-2 {
-    color: #00b9e2;
+  color: #00b9e2;
 }
 
 .tarjeta-track:hover .artista-3 {
-    color: #00b9e2;
+  color: #00b9e2;
 }
 
 .tarjeta-track:hover .artista-4 {
-    color: #00b9e2;
+  color: #00b9e2;
 }
 
 .tarjeta-track:hover .artista-5 {
-    color: #00b9e2;
+  color: #00b9e2;
 }
 
 .icono-reproducir {
   margin-left: auto;
-  color: #ff007a;
+  color: #fd024e;
   font-size: 1.2rem;
   opacity: 0.6;
 }
 
 .reproductor-minimal {
-    height: 30px;
-    width: 200px;
-    filter: invert(100%) hue-rotate(180deg) brightness(1.5); /* Ajusta el color para que combine con el modo oscuro */
-    opacity: 0.7;
-    transition: opacity 0.3s;
+  height: 30px;
+  width: 200px;
+  filter: invert(100%) hue-rotate(180deg) brightness(1.5); /* Ajusta el color para que combine con el modo oscuro */
+  opacity: 0.7;
+  transition: opacity 0.3s;
 }
 
 .reproductor-minimal:hover {
-    opacity: 1;
+  opacity: 1;
 }
