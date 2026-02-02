@@ -29,7 +29,6 @@ h2#titulo-resumen,
   display: flex;
   align-items: stretch;
   /* Hace que imagen y texto tengan la misma altura */
-  margin-bottom: 60px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
   padding: 0;
@@ -289,9 +288,6 @@ h2#titulo-resumen,
 /*  MEDIA QUERIES (RESPONSIVE) */
 /* PARA CELULAR */
 @media screen and (max-width: 767px) {
-  .seccion-resumenes {
-    padding: 40px 20px;
-  }
 
   .row-resumen,
   .reverse {
@@ -358,6 +354,7 @@ h2#titulo-resumen,
 .titulo-musica {
     font-size: 45px;
     text-align: center;
+    margin-top: 0px;
   }
 
 h2#titulo-resumen {
@@ -366,13 +363,14 @@ h2#titulo-resumen {
 
 .llamado {
     font-size: 45px;
+    margin-bottom: 0;
   }  
   
 }
 
 /* PARA TABLETS */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .seccion-resumenes {
+  .seccion-resumenes {    
     padding: 40px 3%;
     width: 95%;
   }
@@ -393,7 +391,8 @@ h2#titulo-resumen {
   }
 
   .seccion-soundtrack-inferior {
-    padding: 40px 5%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .grid-musica {
@@ -407,10 +406,21 @@ h2#titulo-resumen {
   .reproductor-minimal {
     width: 180px; /* el reproductor un poco más largo que en móvil */
   }
+
+  h2#titulo-resumen {
+    font-size: 55px;
+  }
+
+.titulo-musica {
+  margin: 0;
+    font-size: 55px;  
 }
 
 .llamado {
-    font-size: 45px; /* Tamaño reducido para que no rompa el diseño */
+    font-size: 50px; /* Tamaño reducido para que no rompa el diseño */
     margin-top: 40px;
     padding: 0 15px; /* Evita que el texto toque los bordes */
   }
+
+}
+
