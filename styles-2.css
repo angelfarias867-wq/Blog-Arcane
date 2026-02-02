@@ -3,7 +3,6 @@
   color: white;
   font-family: "Roboto Condensed", sans-serif;
   padding: 20px 5% 0 5%;
-
   width: 90%;
   margin: auto;
 }
@@ -33,6 +32,7 @@ h2#titulo-resumen,
   margin-bottom: 60px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
+  padding: 0;
 }
 
 /* Clase para invertir el orden en la Temporada 2 */
@@ -49,10 +49,12 @@ h2#titulo-resumen,
 }
 
 .imagen-resumen {
-  flex: 0 0 40%;
+  flex: 0 0 50%;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
   min-height: 400px;
   filter: grayscale(0.3) contrast(1.2);
   background-position: center;
@@ -371,7 +373,8 @@ h2#titulo-resumen {
 /* PARA TABLETS */
 @media (min-width: 769px) and (max-width: 1024px) {
   .seccion-resumenes {
-    padding: 60px 5%;
+    padding: 40px 3%;
+    width: 95%;
   }
 
   .texto-resumen {
@@ -390,11 +393,11 @@ h2#titulo-resumen {
   }
 
   .seccion-soundtrack-inferior {
-    padding: 60px 5%;
+    padding: 40px 5%;
   }
 
   .grid-musica {
-    max-width: 90%; /* se aprovecha más el ancho en tablets */
+    max-width: 85%; /* se aprovecha más el ancho en tablets */
   }
 
   .tarjeta-track {
@@ -402,6 +405,12 @@ h2#titulo-resumen {
   }
 
   .reproductor-minimal {
-    width: 250px; /* el reproductor un poco más largo que en móvil */
+    width: 180px; /* el reproductor un poco más largo que en móvil */
   }
 }
+
+.llamado {
+    font-size: 45px; /* Tamaño reducido para que no rompa el diseño */
+    margin-top: 40px;
+    padding: 0 15px; /* Evita que el texto toque los bordes */
+  }
